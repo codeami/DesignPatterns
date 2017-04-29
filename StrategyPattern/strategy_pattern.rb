@@ -1,6 +1,5 @@
 # This is our context class, the operator of strategies which uses WildDuck#fly, CityDuck#fly and CloudyDuck#fly interchangeably. It relies on strategies and let us know what type of #fly behavior the ducks posseses...
 class FlyingDucks
-
 	def initialize
 		@duck = nil
 	end
@@ -14,47 +13,37 @@ class FlyingDucks
 		puts "Hey duckies!! Introduce yourselves... "
 		puts "\n"
 	end
-
-
+	
 # We should be able to get the response of all the ducks without actually creating the different response class for all the ducks...
 	def ducky_response
 		@duck.fly
 	end
-
 end
 
 
 # Strategies and its objects...
 class Duck 
-
 	def my_intro
 		puts "****ANSWERS****"
 	end
-
 end
 
 class WildDuck < Duck
-
 	def fly
 		puts "Hey! Am a wild duck and I fly in the forests..."
 	end
-
 end
 
 class CityDuck < Duck
-
 	def fly
 		puts "Hey! Am a city duck and I don't fly instead lives in ponds..."
 	end
-
 end
 
 class CloudyDuck < Duck
-
 	def fly
 		puts "Hey! Am a cloudy duck and I fly over the clouds..."
 	end
-
 end
 
 
